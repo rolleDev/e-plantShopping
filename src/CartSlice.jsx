@@ -1,4 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { ssrExportAllKey } from 'vite/runtime';
+import { addItem } from 'CartSlice.jsx';
 
 export const CartSlice = createSlice({
   name: 'cart',
