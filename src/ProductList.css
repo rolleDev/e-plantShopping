@@ -52,7 +52,7 @@ body {
     flex-wrap: wrap;
     gap: 50px;
     /* background-color: pink; */
-    /* justify-content: space-between; */
+    justify-content: space-between;
     padding: 20px;
     width: 100%;
     align-items: center;
@@ -63,6 +63,7 @@ body {
 .product-card {
     flex: 0 0 calc(33.33% - 20px); /* Adjust width for 3 cards per row with 20px gap */
     max-width: calc(26.33% - 20px); /* Adjust max-width for 3 cards per row with 20px gap */
+    max-height: fit-content;
     margin-bottom: 20px;
     padding: 20px;
     background-color: #fff;
@@ -93,8 +94,11 @@ body {
 }
 
 .product-image {
-    max-width: 100%;
-    height: 200px; /* Adjust height for better consistency */
+    max-width: 200px;
+    max-width: 200px; /* Adjust height for better consistency */
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .product-button {

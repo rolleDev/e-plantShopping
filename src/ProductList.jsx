@@ -230,7 +230,7 @@ function ProductList() {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    width: '1100px',
+    width: '1000px',
    }
    const styleA={
     color: 'white',
@@ -290,10 +290,10 @@ const handlePlantsClick = (e) => {
                             <div className="product-list">
                                 {category.plants.map((plant, plantIndex) => (
                                     <div className="product-card" key={plantIndex}>
-                                        <img className='produc-image' src={plant.image} alt={plant.name} />
+                                        <img className='product-image' src={plant.image} alt={plant.name} />
                                         <div className="product-title">{plant.name}</div>
                                         <div className="product-description">{plant.description}</div>
-                                        <div className="product-cost">{plant.cost}</div>
+                                        <div className="product-price">{plant.cost}</div>
                                         <button className='product-button' on onClick={() => handleAddToCart(plant)}>Add to Cart</button>
                                     </div>
                                 ))}
