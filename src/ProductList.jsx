@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './ProductList.css'
-import cartReducer from './CartSlice';
-
+import CartItem from './CartItem';
+import { addItem } from './CartSlice';
 function ProductList() {
-    const [showCart, setShowCart] = useState(false); 
+    const dispatch = useDispatch();
+    const [showCart, setShowCart] = useState(false);
+    const cart = useSelector(state => state.cart.items);
     const [showPlants, setShowPlants] = useState(false); // State to control the visibility of the About Us page
-
+    const [setAddedToCart] = useState({});
     const plantsArray = [
         {
             category: "Air Purifying Plants",

@@ -1,6 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { ssrExportAllKey } from 'vite/runtime';
-
 
 export const CartSlice = createSlice({
   name: 'cart',
@@ -13,7 +11,7 @@ export const CartSlice = createSlice({
       const existingItem = state.items.find(item => item.name === name);
       if (existingItem) {
         // Increment quantity if the item already exists
-        existingItem.quantity += 1;
+        existingItem.quantity++;
       } else {
         // Add new item with initial quantity of 1
         state.items.push({ name, image, cost, quantity: 1 });
