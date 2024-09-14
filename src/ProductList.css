@@ -51,7 +51,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    /* background-color: pink; */
+    background-color: white;
     justify-content: space-between;
     padding: 20px;
     width: 100%;
