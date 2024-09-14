@@ -57,6 +57,7 @@ body {
     width: 100%;
     align-items: center;
     justify-content: center;
+    
 }
 
 /* Product Card */
@@ -66,7 +67,6 @@ body {
     max-height: fit-content;
     margin-bottom: 20px;
     padding: 20px;
-    background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
     text-align: center;
@@ -80,6 +80,7 @@ body {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
     z-index: 1;
+    background-color: #fff;
 }
 
 .product-title {
@@ -94,11 +95,14 @@ body {
 }
 
 .product-image {
-    max-width: 200px;
-    max-width: 200px; /* Adjust height for better consistency */
-    align-items: center;
-    justify-content: center;
-    
+width: 100%;
+    /* Forces image to fill the container width */
+    height: 100%;
+    /* Forces image to fill the container height */
+    object-fit: cover;
+    /* Ensures the image fits the container without distortion */
+    display: block;
+
 }
 
 .product-button {
